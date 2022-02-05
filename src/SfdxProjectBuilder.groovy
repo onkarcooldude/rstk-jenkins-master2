@@ -258,7 +258,7 @@ class SfdxProjectBuilder implements Serializable {
 
   private void initializeBuildScriptVariables() {
     RUN_ARTIFACT_DIR = "target/${_.env.BUILD_NUMBER}"
-    SFDX_SCRATCH_ORG_ALIAS = "bluesphere-${_.env.BRANCH_NAME.replaceAll("/", "_")}-${_.env.BUILD_NUMBER}"
+    SFDX_SCRATCH_ORG_ALIAS = "bluesphere-${_.env.BRANCH_NAME}-${_.env.BUILD_NUMBER}"
   }
 
   private void readAndParseSFDXProjectFile() {
