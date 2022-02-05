@@ -6,7 +6,7 @@ class SfdxProjectBuilder implements Serializable {
 
   private def toolbelt
 
-  private def RUN_ARTIFACT_DIR 
+  private def RUN_ARTIFACT_DIR = "C:\sfdxartifact"
 
   private def SFDX_SCRATCH_ORG_ALIAS
 
