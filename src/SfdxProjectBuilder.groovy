@@ -267,9 +267,9 @@ class SfdxProjectBuilder implements Serializable {
   }
 
   private void authenticateToDevHub() {
-    _.withCredentials( [ _.file( credentialsId: _.env.JWT_CRED_ID_DH, variable: 'jwt_key_file') ] ) {
+    //_.withCredentials( [ _.file( credentialsId: _.env.JWT_CRED_ID_DH, variable: 'jwt_key_file') ] ) {
         // temporary workaround pending resolution to this issue https://github.com/forcedotcom/cli/issues/81
-        _.sh returnStatus: true, script: "cp ${_.jwt_key_file} ./server.key"
+       // _.sh returnStatus: true, script: "cp ${_.jwt_key_file} ./server.key"
         // _.fileOperations([_.fileCopyOperation(excludes: '', flattenFiles: false, includes: _.jwt_key_file, targetLocation: './server.key')])  // some issue with the masking of the file name.  Need to sort it out
 
         _.echo("Authenticating To Dev Hub...")
