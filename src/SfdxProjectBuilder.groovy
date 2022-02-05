@@ -165,7 +165,7 @@ class SfdxProjectBuilder implements Serializable {
 
   void initializeStage() {
     // setup this build's unique artifact directory
-    _.sh "mkdir -p ${RUN_ARTIFACT_DIR}"
+   // _.sh "mkdir -p ${RUN_ARTIFACT_DIR}"
 
     readAndParseSFDXProjectFile()
     authenticateToDevHub()
