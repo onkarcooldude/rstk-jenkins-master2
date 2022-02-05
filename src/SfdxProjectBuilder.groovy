@@ -275,7 +275,7 @@ class SfdxProjectBuilder implements Serializable {
               _.echo("Authenticating To Dev Hub...")
         // script {
         //def rc = _.bat returnStatus: true, script: "${this.toolbelt}/sfdx force:auth:jwt:grant --clientid ${_.env.CONNECTED_APP_CONSUMER_KEY_DH}} --username ${_.env.SFDX_DEV_HUB_USERNAME} --jwtkeyfile server.key --instanceurl ${_.env.SFDX_DEV_HUB_HOST}"
-         def rc = _.sh returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${CONNECTED_APP_CONSUMER_KEY} --username ${HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
+         def rc = _.sh returnStatus: true, script: "\"${toolbelt}\" force:auth:jwt:grant --clientid ${_.env.CONNECTED_APP_CONSUMER_KEY} --username ${_.env.HUB_ORG} --jwtkeyfile \"${jwt_key_file}\" --setdefaultdevhubusername --instanceurl ${SFDC_HOST}"
 
       if (rc != 0) { _.error "hub org authorization failed" }
         // }
