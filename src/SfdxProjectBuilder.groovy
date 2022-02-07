@@ -8,7 +8,7 @@ class SfdxProjectBuilder implements Serializable {
 
   private def RUN_ARTIFACT_DIR = "C:/sfdxartifact"
   
-  private def SFDX_DEV_HUB_HOST = _.env.SFDC_HOST_DH
+  //private def SFDX_DEV_HUB_HOST = _.env.SFDC_HOST_DH
 
   private def SFDX_SCRATCH_ORG_ALIAS
 
